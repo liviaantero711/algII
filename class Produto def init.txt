@@ -1,0 +1,58 @@
+class Produto:
+    def __init__(self, nome: str, preco: float):
+        self.__nome = nome
+        self.__preco = preco
+
+    def __str__(self):
+        return f"Produto: {self.__nome}, Preço: R${self.__preco:.2f}"
+
+
+class Livro(Produto):
+    def __init__(self, nome: str, preco: float, autor: str, genero: str):
+        super().__init__(nome, preco)
+        self.__autor = autor
+        self.__genero = genero
+
+    def __str__(self):
+        return f"{super().__str__()}, Autor: {self.__autor}, Gênero: {self.__genero}"
+
+
+class Eletronico(Produto):
+    def __init__(self, nome: str, preco: float, marca: str, voltagem: str):
+        super().__init__(nome, preco)
+        self.__marca = marca
+        self.__voltagem = voltagem
+
+    def __str__(self):
+        return f"{super().__str__()}, Marca: {self.__marca}, Voltagem: {self.__voltagem}"
+
+
+class Roupa(Produto):
+    def __init__(self, nome: str, preco: float, tamanho: str, cor: str):
+        super().__init__(nome, preco)
+        self.__tamanho = tamanho
+        self.__cor = cor
+
+    def __str__(self):
+        return f"{super().__str__()}, Tamanho: {self.__tamanho}, Cor: {self.__cor}"
+
+
+# Código de teste
+def main():
+    produtos = [
+        Livro("O pequeno principe", 30.90, "Junior Santos", "Fantasia"),
+        Eletronico("Smartphone AP", 666.90, "Marca A", "bivolt"),
+        Roupa("Camiseta Básica", 25.90, "M", "Azul"),
+        Livro("1984", 29.90, "George Orwell", "Ficção Científica"),
+        Eletronico("Notebook ABC", 2999.90, "Marca B", "110V"),
+        Roupa("Calça Jeans", 89.90, "G", "Azul")
+    ]
+
+    for produto in produtos:
+        print(produto)
+
+
+if __name__ == "__main__":
+    main()
+
+

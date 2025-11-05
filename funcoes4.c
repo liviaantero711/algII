@@ -16,8 +16,8 @@ void bhaskara (float x, float y)
   d = r - 4 * (a * c);
   x = ((-b) + sqrt(d)) / (2 * a);
   y = ((-b) - sqrt(d)) / (2 * a);
-  printf(" Os valor de x é: %f", x);
-  printf(" Os valor de y é: %f", y);
+  printf(" Os valor de x Ã©: %f", x);
+  printf(" Os valor de y Ã©: %f", y);
 
 }
 int main(void){

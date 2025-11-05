@@ -1,13 +1,13 @@
 include<stdio.h>
-/*Faça uma função que receba um texto por parâmetro e escreva-o na tela
-(print), em seguida retorne “Ok”*/
+/*FaÃ§a uma funÃ§Ã£o que receba um texto por parÃ¢metro e escreva-o na tela
+(print), em seguida retorne â€œOkâ€*/
 #include <stdio.h>
 
 void Texto(char te[], int t)
 {
     printf("insira um texto:\n");
     fgets(te, tamanho, stdin);
-    printf("Você digitou: %s\n", te);
+    printf("VocÃª digitou: %s\n", te);
     printf("Ok! \n");
 }
 
